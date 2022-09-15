@@ -1,0 +1,13 @@
+div.numpad {
+    width: 17vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    font-family: 'Quicksand';
+}
+
+div.numpad button:hover {
+    background-color: #606060;
+}

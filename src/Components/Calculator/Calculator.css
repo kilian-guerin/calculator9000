@@ -1,0 +1,61 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand';
+}
+
+div.screen {
+    position: relative;
+    width: 23vw;
+    height: 70vh;
+    background-color: #1C1C1C;
+    color: #ffffff;
+    font-size: 2em;
+    text-align: right;
+    margin: 0;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+
+    box-shadow: 0px 0px 15px 9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 15px 9px rgba(0,0,0,0.75); 
+}
+
+div.screen div.screen__buttons__number {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    flex: 2 1 auto;
+}
+
+div.screen button {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #505050;
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+    border: none;
+
+    cursor: pointer;
+    transition-duration: 200ms;
+    font-family: 'Quicksand';
+}
+
+div.screen button.large {
+    width: 162px;
+}

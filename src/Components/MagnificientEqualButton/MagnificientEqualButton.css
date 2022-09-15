@@ -1,0 +1,21 @@
+div.numpad-operation {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+div.numpad-operation button {
+    background-color: #FF9500;
+}
+
+div.numpad-operation button:hover {
+    background-color: #d87e00;
+}
+
+button#clear {
+    border-radius: 0 0 29px 0;
+    -webkit-border-radius: 0 0 29px 0;
+    -moz-border-radius: 0 0 29px 0;
+    -ms-border-radius: 0 0 29px 0;
+    -o-border-radius: 0 0 29px 0;
+}

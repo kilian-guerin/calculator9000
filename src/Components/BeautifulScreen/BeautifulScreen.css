@@ -1,0 +1,14 @@
+div.screen__result {
+    width: 92%;
+    height: 11.4vh;
+    padding: 1vh 1vw;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
