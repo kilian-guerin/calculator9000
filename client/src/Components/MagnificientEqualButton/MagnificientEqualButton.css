@@ -1,0 +1,19 @@
+div.screen__buttons__number > button {
+    width: 244px;
+    height: 79.75px;
+    font-size: 1em;
+    padding: 0;
+    background-color: #FF9500;
+    border-radius: 0 0 0 29px;
+    -webkit-border-radius: 0 0 0 29px;
+    -moz-border-radius: 0 0 0 29px;
+    -ms-border-radius: 0 0 0 29px;
+    -o-border-radius: 0 0 0 29px;
+    position: absolute;
+    bottom: 2.5px;
+    left: 4px;
+}
+
+div.screen__buttons__number > button:hover {
+    background-color: #d87e00;
+}
