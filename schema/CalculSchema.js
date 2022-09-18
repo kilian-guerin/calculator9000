@@ -12,18 +12,4 @@ const CalculSchema = new mongoose.Schema({
 
 const Calculs = mongoose.model("Calculs", CalculSchema);
 
-function newCalcul(data) {
-  const newCalcul = new Calculs({
-    calcul: data.calcul,
-    result: data.total,
-  });
-
-  newCalcul
-    .save()
-    .then(() => {
-      console.log("new calcul saved");
-    })
-    .catch((err) => console.log(err));
-}
-
-module.exports = { Calculs, newCalcul };
+module.exports = { Calculs };
