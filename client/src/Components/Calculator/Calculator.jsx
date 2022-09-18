@@ -14,29 +14,44 @@ export default function Calculator() {
   const [screen, setScreen] = useState({
     calcul: 0,
     total: 0,
+    operator: false,
   });
 
   var handleClick = (e) => {
-    if(e >= 0 || e < 10 || e === "."  || e === "+" || e === "-" || e === "*" || e === "/") {
-      if((e !== "+" || e !== "-" || e !== "*" || e !== "/") && screen.total === 0 ) {
-        return setScreen({
-          ...screen,
-          total: e.toString()
-        });
+    if (e >= 0 || e < 10 || e === "." || e === "+" || e === "-" || e === "*" || e === "/") {
+      if (e === "+" || e === "-" || e === "*" || e === "/") {
+        if (screen.operator === false) {
+          setScreen({
+            ...screen,
+            total: screen.total + e.toString(),
+            operator: true,
+          });
+        }
       } else {
-        setScreen({
-          ...screen,
-          total: screen.total + e.toString()
-        });
+        if (screen.total === 0) {
+          console.log('2')
+          setScreen({
+            ...screen,
+            total: e.toString(),
+            operator: false,
+          });
+        } else {
+          console.log('3')
+          setScreen({
+            ...screen,
+            total: screen.total + e.toString(),
+            operator: false,
+          });
+        }
       }
-    } else if(e === "C") {
+    } else if (e === "C") {
       return setScreen({
         ...screen,
         calcul: 0,
         total: 0,
       });
-    } else if(e === "=") {
-      if(screen.total.includes('/0')) {
+    } else if (e === "=") {
+      if (screen.total.includes('/0')) {
         return setScreen({
           ...screen,
           total: 0,
@@ -55,16 +70,16 @@ export default function Calculator() {
   return (
     <div className="calculator">
       <div className="screen">
-        { screen.total > 9000 ? <ItSOverNineThousand/> : '' }
-        <BeautifulScreen result={screen.total}/>
+        {screen.total > 9000 ? <ItSOverNineThousand /> : ''}
+        <BeautifulScreen result={screen.total} />
         <div className="screen__buttons__number">
-          <AmazingNumberButton handleClickParent={ handleClick }/>
-          <GreatOperationButton handleClickParent={ handleClick }/>
-          <MagnificientEqualButton handleClickParent={ handleClick }/>
+          <AmazingNumberButton handleClickParent={handleClick} />
+          <GreatOperationButton handleClickParent={handleClick} />
+          <MagnificientEqualButton handleClickParent={handleClick} />
         </div>
       </div>
       <div className="screen">
-        <HistoryCalculator data={ screen }/>
+        <HistoryCalculator data={screen} />
       </div>
     </div>
   );
